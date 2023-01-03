@@ -2,8 +2,6 @@
 # Input(graph_3.txt) : Output True.
 
 from queue import Queue
-import networkx as nx
-import matplotlib.pyplot as plt
 
 def graph_file(file):
     nodes_num = int(file.readline())
@@ -226,7 +224,6 @@ def OmD_alg(root):
             for neighbor in adj_list[current_node]:
                 if not visited_nodes[neighbor] :
                     visited_nodes[neighbor] = True
-                    parent[neighbor] = current_node
                     level[neighbor] = level[current_node] + 1
                     queue.put(neighbor)
                 #If a non-neighbor of root(current_node) share a neighbor with root,append neighbor in neighbors_of_root list.
