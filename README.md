@@ -43,3 +43,6 @@ As long as the highest degree of a node in the graph exceeds the threshold, we e
 At the end, from all the maximal cliques we have stored for the respective subsets of nodes in the graph, we identify the largest clique which is the goal of the algorithm.
 
 ### recognition_of_diamonds.py
+
+The algorithm recognizes whether a graph is diamond-free. In this implementation, the process of checking for a diamond within the graph is divided into four phases. Before executing the phases, the algorithm separates the nodes into low-degree L and high-degree H. This separation is based on a threshold D.
+The process of the first phase checks if there is a diamond as an induced subgraph with a degree-3 node in the subgraph belonging to the low-degree L nodes. In the second phase, it is checked if there is a diamond as an induced subgraph with a degree-2 node belonging to the low-degree L nodes. If no diamond has been found in the previous phases, we move on to the third phase. In the third phase, we remove all low-degree nodes from the graph and update the adjacency lists of the remaining nodes. In the fourth phase, we perform the process from the beginning by checking if there is a diamond in the remaining graph. The algorithm returns True if G is diamond-free, otherwise, it returns False.
