@@ -29,12 +29,12 @@ The basic strategy being applied focuses on the degree of the nodes in the graph
 The algorithm takes as input a graph and returns True if the graph is (diamond,C4)-free,otherwise it returns False.
 
 
-###enumerate_max_cliques.py
+### enumerate_max_cliques.py
 
 The algorithm takes as input a graph that is (house, diamond)-free and a node u in the graph. 
 It computes the set of maximum cliques that intersect the set N(u) U {u}. More specifically, the algorithm identifies all cliques in the graph that either contain the input node u or contain at least one neighbor of the input node.
 
-###maxclique.py
+### maxclique.py
 
 The algorithm takes as input a (house, diamond)-free graph and computes the largest clique in the graph.
 The algorithm is a composition of the previous algorithms that we have analyzed, as all of them together contribute to solving the problem of finding the maximum clique.
@@ -42,4 +42,4 @@ To implement it, we use the basic strategy of recognition_3_2.py that focuses on
 As long as the highest degree of a node in the graph exceeds the threshold, we execute the enumerate_maximal_cliques.py algorithm to identify the set of maximum cliques.
 At the end, from all the maximal cliques we have stored for the respective subsets of nodes in the graph, we identify the largest clique which is the goal of the algorithm.
 
-###recognition_of_diamonds.py
+### recognition_of_diamonds.py
